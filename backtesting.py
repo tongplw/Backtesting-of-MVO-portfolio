@@ -6,7 +6,7 @@ from datetime import datetime
 
 stocks = ['PTT', 'CPALL', 'SCC', 'BDMS', 'AOT']
 MONEY = 1000000
-reallocate = 0  # month:0, year:1
+reallocate = 1  # month:0, year:1
 
 def plot_stocks():
     df = opt.getStockDataFrame(stocks)
