@@ -23,6 +23,7 @@ def getStockDataFrame(stocks):
     w.columns = [name.split('.')[0] for name in stocks]
     return w
 
+
 def allocate(stocks_dataframe):
     portfolio_size = len(stocks_dataframe.columns)
     returns = stocks_dataframe.pct_change()
