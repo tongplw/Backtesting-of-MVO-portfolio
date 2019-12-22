@@ -1,11 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import opt
+import optimizer as opt
 from datetime import datetime
 
 
 stocks = ['PTT', 'CPALL', 'SCC', 'BDMS', 'AOT']
 MONEY = 1000000
+reallocate = 0  # month:0, year:1
 
 def plot_stocks():
     df = opt.getStockDataFrame(stocks)
@@ -21,8 +22,6 @@ def plot_stocks():
     for index, row in enumerate(df.iterrows()):
         date = row[0]
         price = row[1]
-
-        reallocate = 0  # month:0, year:1
 
         # calculate every month or every year
         routine = date.month if reallocate else date.day
